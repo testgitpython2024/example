@@ -1,7 +1,8 @@
 import random
+
 print("Добро пожаловать в игру 'Камень, ножницы, бумага, спок, змея'")
-playerScore=0
-botScore=0
+playerScore = 0
+botScore = 0
 for i in range(3):
     answer = input("Что выберешь?\n").lower()
     if answer.find("камень") != -1:
@@ -21,11 +22,11 @@ for i in range(3):
     print(botAnswer)
     if answer == botAnswer:
         print("Ничья")
-    elif (answer == "к" and botAnswer == "н" or botAnswer == "з") or \
-            (answer == "н" and botAnswer == "б" or botAnswer == "з") or \
-            (answer == "б" and botAnswer == "к" or botAnswer == "с") or \
-            (answer == "с" and botAnswer == "к" or botAnswer == "н") or \
-            (answer == "з" and botAnswer == "с" or botAnswer == "б"):
+    elif (answer == "к" and (botAnswer == "н" or botAnswer == "з")) or \
+            (answer == "н" and (botAnswer == "б" or botAnswer == "з")) or \
+            (answer == "б" and (botAnswer == "к" or botAnswer == "с")) or \
+            (answer == "с" and (botAnswer == "к" or botAnswer == "н")) or \
+            (answer == "з" and (botAnswer == "с" or botAnswer == "б")):
         print("Ты победил")
         playerScore += 1
     else:
